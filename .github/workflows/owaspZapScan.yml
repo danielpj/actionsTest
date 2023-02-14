@@ -1,7 +1,7 @@
 # @Author: daniel.johnson
 # @Date:   2023-02-14 10:49:07
 # @Last Modified by:   daniel.johnson
-# @Last Modified time: 2023-02-14 10:54:17
+# @Last Modified time: 2023-02-14 11:03:56
 name: OWASP ZAP GitHub integration Actions
 
 on: [push]
@@ -19,6 +19,6 @@ jobs:
         uses: zaproxy/action-full-scan@v0.4.0
         with:
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://testhtml5.vulnweb.com/'
+          target: 'http://testphp.vulnweb.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
